@@ -94,7 +94,7 @@ h6 {
 
 h3 {
   font-size: 28px;
-  font-family: 'open Sans', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: lighter;
   line-height: 32px;
   color: #444444;
@@ -218,7 +218,7 @@ main .section {
 
 @media (width >= 600px) {
   main .section {
-    padding: 64px 32px;
+    padding: 32px 32px;
   }
 }
 

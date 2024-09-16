@@ -264,6 +264,7 @@ header nav .nav-sections ul > li > ul > li {
     color: #FFF;
     /* margin: 0; */
     font-size: 0.875rem;
+    font-weight: 700;
     text-transform: capitalize;
     margin-left: 500px;
   }
