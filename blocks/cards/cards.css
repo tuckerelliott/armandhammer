@@ -34,12 +34,7 @@
 }
 
 .cards.tips.block > ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(278px, 1fr));
-  grid-gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
 .cards.tips.block {
@@ -50,4 +45,13 @@
   font-size: 21px;
   font-weight: bold;
   color: #444444;
+}
+
+.cards.tips.block > ul > li {
+  padding: 0;
+}
+
+.cards.tips.block > ul > li img {
+  object-fit: cover;
+  width: 100%;
 }

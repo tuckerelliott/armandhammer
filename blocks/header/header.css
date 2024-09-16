@@ -149,6 +149,7 @@ header .nav-brand {
   font-size: var(--heading-font-size-s);
   font-weight: 700;
   line-height: 1;
+  padding-top: 20px;
 }
 
 header nav .nav-brand img {
@@ -158,6 +159,14 @@ header nav .nav-brand img {
 
 /* sections */
 header nav .nav-sections {
+  grid-area: sections;
+  flex: 1 1 auto;
+  display: none;
+  visibility: hidden;
+  background-color: var(--overlay-color);
+}
+
+header nav .nav-quickLinks {
   grid-area: sections;
   flex: 1 1 auto;
   display: none;
@@ -197,8 +206,22 @@ header nav .nav-sections ul > li > ul > li {
     white-space: nowrap;
   }
 
+  header nav .nav-quickLinks {
+    grid-area: sections;
+    flex: 1 1 auto;
+    background-color: #F88C00;
+    display: block;
+    visibility: visible;
+    align-self: start;
+    position: absolute;
+    width: 105%;
+    margin-left: -140px;
+    height: 48px;
+  }
+
   header nav[aria-expanded='true'] .nav-sections {
     align-self: unset;
+    padding-top: 20px;
   }
 
   header nav .nav-sections .nav-drop {
@@ -232,6 +255,17 @@ header nav .nav-sections ul > li > ul > li {
     gap: 2em;
     margin: 0;
     font-size: var(--body-font-size-xs);
+  }
+
+  header nav .nav-quickLinks ul {
+    display: flex;
+    gap: 2em;
+    list-style: none;
+    color: #FFF;
+    /* margin: 0; */
+    font-size: 0.875rem;
+    text-transform: capitalize;
+    margin-left: 500px;
   }
 
   header nav .nav-sections .default-content-wrapper > ul > li {
