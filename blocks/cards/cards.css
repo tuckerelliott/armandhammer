@@ -54,4 +54,10 @@
 .cards.tips.block > ul > li img {
   object-fit: cover;
   width: 100%;
+  height: 209px;
+  border-bottom: 5px solid #F88C00;
+}
+
+.cards.categories.block > ul > li {
+  text-align: center;
 }

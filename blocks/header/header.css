@@ -275,6 +275,16 @@ header nav .nav-sections ul > li > ul > li {
     font-weight: 700;
   }
 
+  header nav .nav-quickLinks ul li:nth-child(4n+1) {
+    margin-bottom: 0px;
+    border: 1px solid #cecece;
+    float: right;
+    display: inline-block;
+    padding: 2px 10px;
+    cursor: pointer;
+  }
+
+
   header nav .nav-sections .default-content-wrapper > ul > li > ul {
     display: none;
     position: relative;
@@ -311,4 +321,8 @@ header nav .nav-sections ul > li > ul > li {
 /* tools */
 header nav .nav-tools {
   grid-area: tools;
+}
+
+nav li a {
+  color: #000 !important;
 }
