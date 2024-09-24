@@ -61,3 +61,12 @@
 .cards.categories.block > ul > li {
   text-align: center;
 }
+
+.cards a.button:any-link {
+  all: unset;
+  display: inline-block;
+  font-size: 14px;
+  padding-left: 0px;
+  color: #444444 !important;
+  cursor: pointer;
+}
