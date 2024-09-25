@@ -1,94 +1,125 @@
-main .carousel-container {
-  padding: 0;
+/* stylelint-disable media-feature-range-notation */
+/* stylelint-disable color-function-notation */
+/* stylelint-disable alpha-value-notation */
+.carousel-wrapper {
+  padding: 1rem;
 }
 
-main .carousel {
-  display: flex;
-  scroll-snap-type: x mandatory;
-  overflow: scroll hidden;
-  scroll-behavior: smooth;
-  max-width: 1680px;
-  margin: auto;
-}
-
-main .carousel picture {
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  box-sizing: border-box;
-}
-
-main .carousel img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  object-position: 90%;
-}
-  
-main .carousel > div {
-  width: 100%;
-  flex-shrink: 0;
-  scroll-snap-align: start;
+.carousel-container {
   position: relative;
-  min-height: 580px;
-  align-items: flex-end;
-  display: flex;
+  height: 100%;
+
+  & .carousel {
+    margin: 2rem auto;
+
+    & .carousel-container {
+      display: flex;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+
+      & .card {
+        flex: 1 1 270px;
+        min-width: 270px;
+        max-width: 400px;
+        box-sizing: border-box;
+        padding: 20px 5px 18px;
+        background-color: var(--color-white);
+        border: 1px solid #cecece;
+        text-align: center;
+        color: var(--color-black);
+
+        & .image-wrapper {
+          width: 100%;
+          aspect-ratio: 400 / 194;
+          background-size: cover;
+          background-position: center;
+          position: relative;
+        }
+
+        & p:first-of-type {
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        & p:nth-of-type(2) {
+          font-size: 12px;
+          font-weight: 400;
+          color: rgba(0, 82, 115, 1);
+          line-height: normal;
+        }
+
+        & p:nth-of-type(3) {
+          font-size: 14px;
+          font-weight: 100;
+          line-height: 1.25rem;
+          padding-top: 7px;
+        }
+      }
+    }
+
+    & .carousel-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      padding: 0 10%;
+      margin: 2rem 0 0;
+      display: none;
+    }
+
+    & .carousel-container .card:not(.active) {
+      display: none;
+    }
+
+    & .carousel-nav .left-arrow,
+    .carousel-nav .right-arrow {
+      padding: 10px;
+      background-color: transparent;
+      margin-top: 0;
+      border: none;
+      cursor: pointer;
+    }
+
+    & .left-arrow img,
+    .right-arrow img {
+      max-width: 30px;
+      max-height: 30px;
+    }
+  }
 }
 
-main .carousel div.carousel-text {
-  max-width: 1200px;
-  margin: 0 auto;
-  background-color: white;
-  min-height: 188px;
-  padding: 0 28px;
-}
-
-main .carousel div.carousel-text p {
-  margin: 10px 0 16px;
-  line-height: 1.2;
-}
-
-main .carousel div.carousel-text h2 {
-  margin: 0;
-  margin-top: 16px; 
-}
-
-main .carousel div.carousel-text .button {
-  margin: 0;
-}
-  
-
-main .carousel::-webkit-scrollbar {
-    display: none;
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+    align-items: center;
   }
 
-main .carousel-wrapper {
-  max-width: unset;
+  .carousel .carousel-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    align-content: center;
+    margin: 10px auto;
+  }
 }
 
-main .carousel-wrapper > :last-child {
-  text-align: center;
-  margin-top: 0;
-  position: absolute;
-  display: flex;
-  right: 0;
-  left: 0;
-  justify-content: center;
+.carousel-container img {
+  height: 210px;
 }
 
-main .carousel-wrapper > :last-child button {
-  display: block;
-  height: 10px;
-  width: 10px;
-  padding: 0;
-  margin: 5px;
-  border-radius: 5px;
-  background-color: var(--link-color);
+.carousel-container .info-wrapper {
+  height: 150px;
 }
 
-main .carousel-wrapper > :last-child button.selected {
-  background-color: var(--link-color);
+.carousel-container .info-wrapper::before {
+  content: "Arm & Hammer™";
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  color: #F88C00;
 }
