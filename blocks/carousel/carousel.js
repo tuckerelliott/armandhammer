@@ -44,12 +44,6 @@ function createCarouselCard(card, key) {
   title.textContent = card.Title;
   title.setAttribute("href", card.productURL);
 
-  const services = document.createElement('p');
-  services.textContent = card.Services;
-
-  const description = document.createElement('p');
-  description.textContent = card.Description;
-
   // only append image if imageUrl exists
   const image = createOptimizedPicture(card.image, card.Title, true, [
     { width: '210' },
