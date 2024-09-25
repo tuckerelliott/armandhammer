@@ -110,6 +110,7 @@
 
 .carousel-container img {
   height: 210px;
+  width: auto;
 }
 
 .carousel-container .info-wrapper {
