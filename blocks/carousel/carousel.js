@@ -37,8 +37,12 @@ function createCarouselCard(card, key) {
   const imageContainer = document.createElement('div');
   imageContainer.classList.add('image-wrapper');
 
-  const title = document.createElement('p');
+  const productURL = document.createElement('p');
+  productURL.textContent = card.productURL;
+
+  const title = document.createElement('a');
   title.textContent = card.Title;
+  title.setAttribute("href", card.productURL);
 
   const services = document.createElement('p');
   services.textContent = card.Services;
@@ -53,8 +57,6 @@ function createCarouselCard(card, key) {
 
   // append elements to the containers
   infoContainer.appendChild(title);
-  infoContainer.appendChild(services);
-  infoContainer.appendChild(description);
   imageContainer.appendChild(image);
   cardContainer.appendChild(infoContainer);
   cardContainer.appendChild(imageContainer);
